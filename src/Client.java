@@ -178,26 +178,10 @@ public class Client {
 			 	serv = s.getType() + " " + s.getID();
 				return "SCHD " + job.get(0).getJobID() + " " + serv;
 			} else {
-
-				// if there are no servers currently capable of running the job
-				// we defer to the list of all available servers...
-
-				ArrayList<Server> backupS = new ArrayList<Server>();
-				backupS = readXML("ds-system.xml"); // read from XML file to get ALL Available servers
-
-				for (Server bs: backupS){
-					if (bs.getDisk() >= job.get(0).getDiskReq() 
-					&& bs.getCores() >= job.get(0).getCoreReq()
-					&& bs.getMemory() >= job.get(0).getMemeoryReq()){
-			 		serv = bs.getType() + " " + bs.getID();
-					}
-				}
+				serv = servers.get(0).getType() + " " + servers.get(0).getID();
 			}
 
 		}
-
-		//		command								server type			serverID
-		//return "SCHD " + splitStr[2] + " " + s.getType() + " " + (s.getLimit()-s.getLimit());
 
 		return "SCHD " + job.get(0).getJobID() + " " + serv;
 	}
