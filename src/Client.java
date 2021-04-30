@@ -108,7 +108,7 @@ public class Client {
 					// we should receive a "." here
 					msg = readMessage();
 
-					sendMessage(schdFirstFit(servers, jobs));
+					sendMessage(custBestFit(servers, jobs));
 					msg = readMessage();
 
 					// we only need one job at a time; we remove the fist element
@@ -141,14 +141,33 @@ public class Client {
 	}
 
 
-
+	
 	/* 
+		
+	
 		First fit algo
-
+			finds first available server and schedules it
 		
 
 	*/
-	public String schdFirstFit(ArrayList<Server> servers, ArrayList<Job> job){
+	public String firstFit(ArrayList<Server> servers, ArrayList<Job> job){
+
+		String serv = "";
+
+	
+		serv = servers.get(0).getType() + " " + servers.get(0).getID();
+		return "SCHD " + job.get(0).getJobID() + " " + serv;
+
+	}
+
+
+
+	/* 
+		
+		Custom best fit algo
+
+	*/
+	public String custBestFit(ArrayList<Server> servers, ArrayList<Job> job){
 
 		String serv = "";
 
@@ -160,8 +179,12 @@ public class Client {
 			 	serv = s.getType() + " " + s.getID();
 				return "SCHD " + job.get(0).getJobID() + " " + serv;
 			} else {
+
+				// if there are no servers currently capable of running the job
+				// we defer to the list of all available servers...
+
 				ArrayList<Server> backupS = new ArrayList<Server>();
-				backupS = readXML("ds-system.xml");
+				backupS = readXML("ds-system.xml"); // read from XML file to get ALL Available servers
 
 				for (Server bs: backupS){
 					if (bs.getDisk() >= job.get(0).getDiskReq() 
