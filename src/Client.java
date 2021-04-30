@@ -154,7 +154,6 @@ public class Client {
 
 		String serv = "";
 
-	
 		serv = servers.get(0).getType() + " " + servers.get(0).getID();
 		return "SCHD " + job.get(0).getJobID() + " " + serv;
 
@@ -315,7 +314,7 @@ public class Client {
 		}
 
 		// Display outgoing message from client
-		System.out.println("OUT: " + outStr);		
+		//System.out.println("OUT: " + outStr);		
 	}
 
 	private String readMessage () {
@@ -330,7 +329,7 @@ public class Client {
 		inStr = new String(cbuf, 0, cbuf.length);
 
 		// Display incoming message from server
-		System.out.println("INC: " + inStr);
+		//System.out.println("INC: " + inStr);
 
 		return inStr;
 	}
