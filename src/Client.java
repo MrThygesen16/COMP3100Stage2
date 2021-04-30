@@ -159,7 +159,18 @@ public class Client {
 			&& s.getMemory() >= job.get(0).getMemeoryReq()){
 			 	serv = s.getType() + " " + s.getID();
 				return "SCHD " + job.get(0).getJobID() + " " + serv;
-			}	
+			} else {
+				ArrayList<Server> backupS = new ArrayList<Server>();
+				backupS = readXML("ds-system.xml");
+
+				for (Server bs: backupS){
+					if (bs.getDisk() >= job.get(0).getDiskReq() 
+					&& bs.getCores() >= job.get(0).getCoreReq()
+					&& bs.getMemory() >= job.get(0).getMemeoryReq()){
+			 		serv = bs.getType() + " " + bs.getID();
+					}
+				}
+			}
 
 		}
 
