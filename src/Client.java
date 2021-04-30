@@ -74,6 +74,7 @@ public class Client {
 		// we check the contents of this string, rather than call readMessage() 
 		String msg = readMessage();
 		
+
 		// SCHEDULES JOB TO LARGEST SERVER
 		while (connected){
 			if (msg.contains("JCPL")){
@@ -84,28 +85,38 @@ public class Client {
 				sendMessage("QUIT");
 			}else {
 
+				if (msg.contains("OK")){
+					sendMessage("REDY");
+					msg = readMessage();
+				}
+
+
 				// we have a JOB incoming, so we create a job objet based on it
 				if (msg.contains("JOBN")){
 					jobs.add(jobCreator(msg)); 
-				}
+
+					sendMessage(getsCapable(jobs.get(0)));
+					msg = readMessage();
+
+					sendMessage("OK");
+
+					// list of capable servers are added to arrayList of server objects
+					msg = readMessage();
+					servers = serverCreator(msg);
+					sendMessage("OK");
 				
-				// send message to see what servers are capable for this job
-				sendMessage(getsCapable(jobs.get(0)));
-				//jobs.remove(jobs.get(0));
+					// we should receive a "." here
+					msg = readMessage();
 
-				msg = readMessage();
-				sendMessage("OK");
+					sendMessage(schdFirstFit(servers, jobs));
+					msg = readMessage();
 
-				// list of capable servers are added to arrayList of server objects
-				msg = readMessage();
-				servers = serverCreator(msg);
-				sendMessage("OK");
+					// we only need one job at a time; we remove the fist element
+					// so that the first element will always be the current job...
+					jobs.remove(0);
+				} 
+
 				
-				// we should receive a "." here
-				msg = readMessage();
-
-				connected = false;
-				sendMessage("QUIT");
 
 			} 
 		}
@@ -137,11 +148,25 @@ public class Client {
 		
 
 	*/
-	public String schdFirstFit(ArrayList<Server> s, ArrayList<Job> j){
+	public String schdFirstFit(ArrayList<Server> servers, ArrayList<Job> job){
 
-		
+		String serv = "";
 
-		return "not implemented yet";
+		for (Server s: servers){
+
+			if (s.getDisk() >= job.get(0).getDiskReq() 
+			&& s.getCores() >= job.get(0).getCoreReq()
+			&& s.getMemory() >= job.get(0).getMemeoryReq()){
+			 	serv = s.getType() + " " + s.getID();
+				return "SCHD " + job.get(0).getJobID() + " " + serv;
+			}	
+
+		}
+
+		//		command								server type			serverID
+		//return "SCHD " + splitStr[2] + " " + s.getType() + " " + (s.getLimit()-s.getLimit());
+
+		return "SCHD " + job.get(0).getJobID() + " " + serv;
 	}
 
 
