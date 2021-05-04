@@ -90,7 +90,6 @@ public class Client {
 					msg = readMessage();
 				}
 
-
 				// we have a JOB incoming, so we create a job objet based on it
 				if (msg.contains("JOBN")){
 					jobs.add(jobCreator(msg)); // create job 
@@ -257,31 +256,36 @@ public class Client {
 	}
 
 
+	// STAGE 1 CODE: Commented Out as it is not used for Stage 2
+
 	// receives string input and the largest server as input
 	// schedules job to largest server
-	private String toLargest(String job, Server s){
-		String[] splitStr = job.split("\\s+");
-		return "SCHD " + splitStr[2] + " " + s.getType() + " " + (s.getLimit()-s.getLimit());
+	// private String toLargest(String job, Server s){
+	// 	String[] splitStr = job.split("\\s+");
+	// 	return "SCHD " + splitStr[2] + " " + s.getType() + " " + (s.getLimit()-s.getLimit());
 		
-		// the index [2] represents the job ID from the String "job"
-		//		This string is sent by ds-server to the client 
+	// 	// the index [2] represents the job ID from the String "job"
+	// 	//		This string is sent by ds-server to the client 
 		
-	}
+	// }
+
+
+	// STAGE 1 CODE: Commented Out as it is not used for Stage 2
 
 	// find index of largest server, relative to number of cores
-	private int findLargest(ArrayList<Server> s){
-		int lrgNum = 0;
-		int lrgIndex = 0;
+	// private int findLargest(ArrayList<Server> s){
+	// 	int lrgNum = 0;
+	// 	int lrgIndex = 0;
 
-		for (int i = 0; i < s.size(); i++){
-			if (s.get(i).getCores() > lrgNum){
-				lrgIndex = i;
-				lrgNum = s.get(i).getCores();
-			} 
-		}
+	// 	for (int i = 0; i < s.size(); i++){
+	// 		if (s.get(i).getCores() > lrgNum){
+	// 			lrgIndex = i;
+	// 			lrgNum = s.get(i).getCores();
+	// 		} 
+	// 	}
 
-		return lrgIndex;
-	}
+	// 	return lrgIndex;
+	// }
 
 
 	/* 
@@ -299,13 +303,21 @@ public class Client {
 		}
 
 		// Display outgoing message from client
-		//System.out.println("OUT: " + outStr);		
+		System.out.println("OUT: " + outStr);		
 	}
 
 	private String readMessage () {
 		// read string sent from server
 		String inStr = "";
-		char[] cbuf = new char[((int)Short.MAX_VALUE)*2];
+
+		/* 
+			A short is 2 bytes; 
+			It stores whole numbers from -32,768 to 32,767:
+			
+			So the max value is 32,767... We multiply by 2 to get: 65,534
+			This should be of sufficient size to store pretty any message from ds-server.
+		*/
+		char[] cbuf = new char[((int)Short.MAX_VALUE)*2]; 
 		try {
 			in.read(cbuf);
 		} catch (IOException e) {
@@ -314,7 +326,7 @@ public class Client {
 		inStr = new String(cbuf, 0, cbuf.length);
 
 		// Display incoming message from server
-		//System.out.println("INC: " + inStr);
+		System.out.println("INC: " + inStr);
 
 		return inStr;
 	}
