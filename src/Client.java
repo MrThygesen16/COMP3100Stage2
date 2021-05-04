@@ -79,7 +79,7 @@ public class Client {
 		while (connected){
 			if (msg.contains("JCPL")){ // Job completed we tell ds-server we are ready
 				sendMessage("REDY");
-				msg = readMessage();
+				msg = readMessage(); 
 			} else if (msg.contains("NONE")){ // there are no more jobs left
 				connected = false;			// so we can send a quit message and exit the program
 				sendMessage("QUIT");
@@ -87,7 +87,12 @@ public class Client {
 
 				if (msg.contains("OK")){ 
 					sendMessage("REDY");
-					msg = readMessage();
+					msg = readMessage(); 
+						/* 
+							* We call  "msg = readMessage()" because:
+								1. it is easier to check the contents of the message
+								2. we have to check for a message everytime we send a message
+						*/
 				}
 
 				// we have a JOB incoming, so we create a job objet based on it
@@ -115,9 +120,6 @@ public class Client {
 					// so that the first element will always be the current job...
 					jobs.remove(0);
 				} 
-
-				
-
 			} 
 		}
 
@@ -148,6 +150,8 @@ public class Client {
 		First fit algo
 			finds first available server and schedules it
 		
+		This was my first attempt at a First-Fit algo.
+		
 
 	*/
 	public String firstFit(ArrayList<Server> servers, ArrayList<Job> job){
@@ -166,6 +170,9 @@ public class Client {
 		
 		Custom first fit algo
 			much faster than the above implementation
+			Espeically when it comes to"
+				- "avg waiting time" 
+				- "avg turnaround time"
 
 	*/
 	public String custFirstFit(ArrayList<Server> servers, ArrayList<Job> job){
