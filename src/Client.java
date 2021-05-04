@@ -139,14 +139,10 @@ public class Client {
 
 	
 	/* 
-		
-	
 		First fit algo
 			finds first available server and schedules it
 		
 		This was my first attempt at a First-Fit algo.
-		
-
 	*/
 	public String firstFit(ArrayList<Server> servers, ArrayList<Job> job){
 
@@ -159,15 +155,12 @@ public class Client {
 	}
 
 
-
 	/* 
-		
 		Custom first fit algo
 			much faster than the above implementation
 			Espeically when it comes to:
 				- "avg waiting time" 
 				- "avg turnaround time"
-
 	*/
 	public String custFirstFit(ArrayList<Server> servers, ArrayList<Job> job){
 
@@ -190,9 +183,6 @@ public class Client {
 	// takes server input and creates arrayList of CAPABLE SERVER OBJECTS
 	public ArrayList<Server> serverCreator(String server){
 
-		// remove unwanted data from string i.e. trailing space etc.
-		server = server.trim();
-
 		// temp arrayList to be passed back
 		ArrayList<Server> newList = new ArrayList<Server>();
 
@@ -208,9 +198,21 @@ public class Client {
 			Constructing based off of this definition:
 				String		int			String		int			int		int		int		int		int
 				serverType 	serverID 	state 	curStartTime 	core 	mem 	disk 	#wJobs 	#rJobs
+				
+			
+			[n] represnts the value in the array of Strings 'splitStr'
+			e.g.
+				tiny		0			inactive	-1			1		4000	32000		0		0
+				[0]		   [1]			  [2]	    [3]		   [4]		 [5]	 [6]	   [7]	   [8]
+			
+				[0]	= server type	[4] = core count	
+				[1]	= server id		[5] = memory
+				[2]	= state			[6] = disk space
+				[3]	= start time	[7] = number of waiting jobs
+									[8] = number of running jobs
 			*/
 
-			//						server type		server ID					state		curStart Time					core count						memory						disk							wJobs							rJobs
+			//					  server type  server ID					  state		   Start Time				  	  core count					 memory							disk						   wJobs						  rJobs
 			Server s = new Server(splitStr[0], Integer.parseInt(splitStr[1]), splitStr[2], Integer.parseInt(splitStr[3]), Integer.parseInt(splitStr[4]), Integer.parseInt(splitStr[5]), Integer.parseInt(splitStr[6]), Integer.parseInt(splitStr[7]), Integer.parseInt(splitStr[8]) );
 			newList.add(s);
         }
@@ -235,19 +237,23 @@ public class Client {
 	*/
 	public Job jobCreator(String job){
 
-		// get rid of trailing stuff in message
-		// this is vital otherwise trailing whitespace 
-		// 		will cause an error in parsing the strings to ints
-		job = job.trim();
-
 		// split string up by white space; "\\s+" is a regex expression
 		String[] splitStr = job.split("\\s+");
 
 		/* 
 			Create a new job object;
+				[n] represnts the value in the array of Strings 'splitStr'
+
+				e.g. 
+					JOBN	55		2 		260 	2 		900 	1600
+					[0]	   [1]	   [2]		[3]    [4]		[5]		[6]
+
+				[0] is the string JOBN - we don't need this...
 				[1] = submit Time	| [4] = core req
 				[2] = jobID	 	 	| [5] =	memory req
 				[3] = run Time 	 	| [6] =	disk req
+
+			Apart from [0] (which is not needed) these are all ints
 		*/
 		Job j = new Job(Integer.parseInt(splitStr[1]), Integer.parseInt(splitStr[2]), Integer.parseInt(splitStr[3]),  Integer.parseInt(splitStr[4]) ,Integer.parseInt(splitStr[5]), Integer.parseInt(splitStr[6]));
 
@@ -283,7 +289,7 @@ public class Client {
 			It stores whole numbers from -32,768 to 32,767:
 			
 			So the max value is 32,767... We multiply by 2 to get: 65,534
-			This should be of sufficient size to store pretty any message from ds-server.
+			This should be of sufficient size to store pretty much any message from ds-server.
 		*/
 		char[] cbuf = new char[((int)Short.MAX_VALUE)*2]; 
 		try {
@@ -292,6 +298,10 @@ public class Client {
 			e.printStackTrace();
 		}
 		inStr = new String(cbuf, 0, cbuf.length);
+
+		// once we have formed the string
+		// we must trim it to remove uneeded white-space
+		inStr = inStr.trim();
 
 		// Display incoming message from server
 		System.out.println("INC: " + inStr);
