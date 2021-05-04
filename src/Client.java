@@ -52,16 +52,10 @@ public class Client {
 		//		2. "GETS Capable"
 		ArrayList<Server> servers = new ArrayList<Server>();
 		
-		//	Used for part 1.
-		// 		servers = readXML("ds-system.xml");
 
 		// arrayList for holding job info from "GETS Capable"
 		ArrayList<Job> jobs = new ArrayList<Job>();
 
-
-		// 	Used for part 1.
-		// 		find index of largest server type (most cores)
-		//		int largestServer = findLargest(servers);
 
 		// handshake completed
 		boolean connected = true;
@@ -170,7 +164,7 @@ public class Client {
 		
 		Custom first fit algo
 			much faster than the above implementation
-			Espeically when it comes to"
+			Espeically when it comes to:
 				- "avg waiting time" 
 				- "avg turnaround time"
 
@@ -191,7 +185,6 @@ public class Client {
 		// we know job.get(0) will work as there is only ever 1 item in the job arrayList at a time
 		return "SCHD " + job.get(0).getJobID() + " " + serv;
 	}
-
 
 
 	// takes server input and creates arrayList of CAPABLE SERVER OBJECTS
@@ -261,38 +254,6 @@ public class Client {
 		// returns job object to fill arrayList
 		return j;
 	}
-
-
-	// STAGE 1 CODE: Commented Out as it is not used for Stage 2
-
-	// receives string input and the largest server as input
-	// schedules job to largest server
-	// private String toLargest(String job, Server s){
-	// 	String[] splitStr = job.split("\\s+");
-	// 	return "SCHD " + splitStr[2] + " " + s.getType() + " " + (s.getLimit()-s.getLimit());
-		
-	// 	// the index [2] represents the job ID from the String "job"
-	// 	//		This string is sent by ds-server to the client 
-		
-	// }
-
-
-	// STAGE 1 CODE: Commented Out as it is not used for Stage 2
-
-	// find index of largest server, relative to number of cores
-	// private int findLargest(ArrayList<Server> s){
-	// 	int lrgNum = 0;
-	// 	int lrgIndex = 0;
-
-	// 	for (int i = 0; i < s.size(); i++){
-	// 		if (s.get(i).getCores() > lrgNum){
-	// 			lrgIndex = i;
-	// 			lrgNum = s.get(i).getCores();
-	// 		} 
-	// 	}
-
-	// 	return lrgIndex;
-	// }
 
 
 	/* 
