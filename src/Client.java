@@ -195,23 +195,25 @@ public class Client {
 			String[] splitStr = line.split("\\s+");
 
 			/* 
-			Constructing based off of this definition:
+			Constructing based off of this definition: 	(Server.java)
 				String		int			String		int			int		int		int		int		int
 				serverType 	serverID 	state 	curStartTime 	core 	mem 	disk 	#wJobs 	#rJobs
-				
+		
 			
+
 			[n] represnts the value in the array of Strings 'splitStr'
 			e.g.
 				tiny		0			inactive	-1			1		4000	32000		0		0
 				[0]		   [1]			  [2]	    [3]		   [4]		 [5]	 [6]	   [7]	   [8]
 			
-				[0]	= server type	[4] = core count	
-				[1]	= server id		[5] = memory
-				[2]	= state			[6] = disk space
-				[3]	= start time	[7] = number of waiting jobs
-									[8] = number of running jobs
+				[0]	= server type		[3]	= start time		[6] = disk space
+				[1]	= server id			[4] = core count		[7] = number of waiting jobs
+				[2]	= state				[5] = memory			[8] = number of running jobs
+					
+									
 			*/
 
+			//					  str		   int							  str		   int							  int							 int							int							   int							  int
 			//					  server type  server ID					  state		   Start Time				  	  core count					 memory							disk						   wJobs						  rJobs
 			Server s = new Server(splitStr[0], Integer.parseInt(splitStr[1]), splitStr[2], Integer.parseInt(splitStr[3]), Integer.parseInt(splitStr[4]), Integer.parseInt(splitStr[5]), Integer.parseInt(splitStr[6]), Integer.parseInt(splitStr[7]), Integer.parseInt(splitStr[8]) );
 			newList.add(s);
@@ -241,7 +243,7 @@ public class Client {
 		String[] splitStr = job.split("\\s+");
 
 		/* 
-			Create a new job object;
+			Create a new job object; (Job.java)
 				[n] represnts the value in the array of Strings 'splitStr'
 
 				e.g. 
