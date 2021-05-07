@@ -56,7 +56,7 @@ public class Client {
 		// arrayList for holding job info from "GETS Capable"
 		ArrayList<Job> jobs = new ArrayList<Job>();
 
-
+		
 		// handshake completed
 		boolean connected = true;
 		
@@ -68,8 +68,7 @@ public class Client {
 		// we check the contents of this string, rather than call readMessage() 
 		String msg = readMessage();
 		
-
-		// SCHEDULES JOB TO LARGEST SERVER
+		// 
 		while (connected){
 			if (msg.contains("JCPL")){ // Job completed we tell ds-server we are ready
 				sendMessage("REDY");
