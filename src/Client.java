@@ -172,10 +172,8 @@ public class Client {
 			// find best fit for job
 			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq())){
 			 	
-			
 				serv = s.getType() + " " + s.getID();
 				return "SCHD " + job.get(0).getJobID() + " " + serv;
-				
 				
 			} 
 
