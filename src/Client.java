@@ -113,6 +113,7 @@ public class Client {
 					// we only need one job at a time; we remove the fist element
 					// so that the first element will always be the current job...
 					jobs.remove(0);
+
 				} 
 			} 
 		}
@@ -166,15 +167,20 @@ public class Client {
 
 		String serv = ""; // string for holding the server info to return back
 
+	
 		for (Server s: servers){
 			// find best fit for job
-			if (s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq()){
+			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq())){
 			 	serv = s.getType() + " " + s.getID();
 				return "SCHD " + job.get(0).getJobID() + " " + serv;
-			} else { // if there are non that are absolutely optimal in the GETS Capable list, we just defer to the first from that list
-				serv = servers.get(0).getType() + " " + servers.get(0).getID(); //servers.get(0) is the first server on the returned list
-			}
+			} 
+
 		}
+
+
+
+		serv = servers.get(0).getType() + " " + servers.get(0).getID();
+
 		// we know job.get(0) will work as there is only ever 1 item in the job arrayList at a time
 		return "SCHD " + job.get(0).getJobID() + " " + serv;
 	}
