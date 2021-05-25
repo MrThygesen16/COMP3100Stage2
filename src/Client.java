@@ -89,7 +89,7 @@ public class Client {
 				}
 
 				// we have a JOB incoming, so we create a job objet based on it
-				if (msg.contains("JOBN")){
+				if (msg.contains("JOBN") || msg.contains("JOBP")){
 					jobs.add(jobCreator(msg)); // create job 
 
 					// the job arrayList will only ever have 1 item in it at a time...
@@ -165,24 +165,66 @@ public class Client {
 	public String custFirstFit(ArrayList<Server> servers, ArrayList<Job> job){
 
 		String serv = ""; // string for holding the server info to return back
-
 	
+		ArrayList<Server> feasibleServers = new ArrayList<Server>();
+		
+		//job.get(0).printJobData();
+
 		for (Server s: servers){
-			// find best fit for job
+
 			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq())){
 			 	
-				serv = s.getType() + " " + s.getID();
-				return "SCHD " + job.get(0).getJobID() + " " + serv;
+				feasibleServers.add(s);
+				//s.printCapableData();
 				
 			} 
 
 		}
+	
+		Server allocatedServ;
 
-		serv = servers.get(0).getType() + " " + servers.get(0).getID();
+		if (feasibleServers.isEmpty()){
+					
+			ArrayList<Server> backupList = new ArrayList<Server>();
+			backupList = readXML("ds-system.xml");
+
+			allocatedServ = backupList.get(backupList.size()-1);
+			
+			for (int i = backupList.size()-1; i > 0; i--){
+				if ((backupList.get(i).getDisk() >= job.get(0).getDiskReq() && backupList.get(i).getCores() >= job.get(0).getCoreReq() && backupList.get(i).getMemory() >= job.get(0).getMemeoryReq())){
+						allocatedServ = backupList.get(i);
+				}
+			}
+			
+
+		} else {
+
+			allocatedServ = feasibleServers.get(0);
+
+			for (Server s: feasibleServers){
+				
+				// if (s.getWaitJob() < 1 && s.getRunJob() > 0){
+				// 	allocatedServ = s;
+				// 	// break;
+				// }
+				
+				if (s.getWaitJob() + s.getRunJob() < allocatedServ.getWaitJob() + allocatedServ.getRunJob()){
+					allocatedServ = s;
+					//break;
+				}
+
+			}
+	
+		}
+		
+		serv = allocatedServ.getType() + " " + allocatedServ.getID();
+
+		//System.out.println(job.get(0).getJobID() + " scheduled to: " + serv+"\n");
 
 		// we know job.get(0) will work as there is only ever 1 item in the job arrayList at a time
 		return "SCHD " + job.get(0).getJobID() + " " + serv;
 	}
+
 
 
 	// takes server input and creates arrayList of CAPABLE SERVER OBJECTS
@@ -322,9 +364,9 @@ public class Client {
 		int tryNum = 1;
 		while (true) {
 			try {
-				System.out.println("Connecting to server at: " + address + ":" + port);
+				//System.out.println("Connecting to server at: " + address + ":" + port);
 				socket = new Socket(address, port);
-				System.out.println("Connected");
+				//System.out.println("Connected");
 				break; // we connected, so exit the loop
 			} catch (IOException e) {
 				// reconnect failed, wait.

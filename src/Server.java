@@ -64,6 +64,13 @@ public class Server {
 		}
 
 
+		
+		public void printCapableData(){
+			System.out.println(this.type + " " + this.id + " " + this.status + " " + this.startTime + " " + this.coreCount + " " + this.memory + " " + this.disk + " " + this.waitJobs + " " + this.runJobs);
+		}
+
+
+
 		//
 		// BELOW ARE GETTERS FOR SERVER OBJECT
 		//

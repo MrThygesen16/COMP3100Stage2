@@ -26,6 +26,10 @@ public class Job {
     }
 
 
+    public void printJobData(){
+        System.out.println("\n"+this.jobID + " " + this.coreReq + " " + this.memoryReq + " " + this.diskReq);
+    }
+
     //
     //  BELOW ARE GETTERS FOR JOB OBJECT
     //
