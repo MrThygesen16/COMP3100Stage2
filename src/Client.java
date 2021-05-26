@@ -106,7 +106,7 @@ public class Client {
 					// we should receive a "." here
 					msg = readMessage();
 
-					sendMessage(custFirstFit(servers, jobs)); // Scheduling algorithm called here
+					sendMessage(customAlgo(servers, jobs)); // Scheduling algorithm called here
 					msg = readMessage();
 
 					// we only need one job at a time; we remove the fist element
@@ -156,70 +156,71 @@ public class Client {
 
 
 	/* 
-		Custom first fit algo
-			much faster than the above implementation
-			Espeically when it comes to:
-				- "avg waiting time" 
-				- "avg turnaround time"
+		Custom scheduling algo
+			
 	*/
-	public String custFirstFit(ArrayList<Server> servers, ArrayList<Job> job){
+	public String customAlgo(ArrayList<Server> servers, ArrayList<Job> job){
 
 		String serv = ""; // string for holding the server info to return back
 	
 		ArrayList<Server> feasibleServers = new ArrayList<Server>();
 		
-		//job.get(0).printJobData();
-
+		// check servers given by ds-server fit the job req's as best they can...
 		for (Server s: servers){
 
 			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq())){
 			 	
+				// populate potential list of servers to send job to
 				feasibleServers.add(s);
-				//s.printCapableData();
-				
+
 			} 
 
 		}
-	
+		
+		// server object to return at end
 		Server allocatedServ;
 
+		// if no absolutely best serrvers, we iterate through the list again
+		// and just choose server with the lowest # of waiting jobs
 		if (feasibleServers.isEmpty()){
-					
-			ArrayList<Server> backupList = new ArrayList<Server>();
-			backupList = readXML("ds-system.xml");
+			
+			int waitJ = Integer.MAX_VALUE;
+			allocatedServ = servers.get(0);
 
-			allocatedServ = backupList.get(backupList.size()-1);
-			
-			for (int i = backupList.size()-1; i > 0; i--){
-				if ((backupList.get(i).getDisk() >= job.get(0).getDiskReq() && backupList.get(i).getCores() >= job.get(0).getCoreReq() && backupList.get(i).getMemory() >= job.get(0).getMemeoryReq())){
-						allocatedServ = backupList.get(i);
+			for (Server s: servers){
+				
+				if (s.getWaitJob() < waitJ){
+					allocatedServ = s;
+					waitJ = s.getWaitJob();
 				}
+	
 			}
-			
 
 		} else {
+			// given list of best servers
+			// we iterate through to find the one with highest # of running jobs
+			// and the # of waiting jobs should be less than 1
+			// we pick the job with highest # of running jobs
+			// since the ds-server can run them concurrently...
 
+			// initial pick
 			allocatedServ = feasibleServers.get(0);
 
 			for (Server s: feasibleServers){
+
+				int runJ = -1;
 				
-				// if (s.getWaitJob() < 1 && s.getRunJob() > 0){
-				// 	allocatedServ = s;
-				// 	// break;
-				// }
-				
-				if (s.getWaitJob() + s.getRunJob() < allocatedServ.getWaitJob() + allocatedServ.getRunJob()){
+				if (s.getWaitJob() < 1 && s.getRunJob() > runJ){
 					allocatedServ = s;
-					//break;
+					runJ = s.getRunJob();
 				}
 
 			}
 	
 		}
 		
+		// string to return for scheduling server 
 		serv = allocatedServ.getType() + " " + allocatedServ.getID();
-
-		//System.out.println(job.get(0).getJobID() + " scheduled to: " + serv+"\n");
 
 		// we know job.get(0) will work as there is only ever 1 item in the job arrayList at a time
 		return "SCHD " + job.get(0).getJobID() + " " + serv;
@@ -334,13 +335,10 @@ public class Client {
 		String inStr = "";
 
 		/* 
-			A short is 2 bytes; 
-			It stores whole numbers from -32,768 to 32,767:
-			
-			So the max value is 32,767... We multiply by 2 to get: 65,534
-			This should be of sufficient size to store pretty much any message from ds-server.
+			An Integer's max value is: 65,534
+			This should be sufficient in storing pretty much any message from ds-server.
 		*/
-		char[] cbuf = new char[((int)Short.MAX_VALUE)*2]; 
+		char[] cbuf = new char[Integer.MAX_VALUE];
 		try {
 			in.read(cbuf);
 		} catch (IOException e) {
@@ -424,7 +422,7 @@ public class Client {
     }
 
 
-	// MAIN function of program
+	// main function of program
 	
 	public static void main(String args[]) throws IOException {
 		// Specify Server IP address and Port
