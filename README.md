@@ -1,4 +1,4 @@
-# COMP3100 Stage 2
+# ** COMP3100 Stage 2 **
 Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 
 See [DCS Report] for further documentation.
@@ -57,7 +57,9 @@ See [DCS Report] for further documentation.
             * co = cost optimisation (the objective this algorithm is optimised for)
          * -c is the configuration directory
             * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
-         * [-n] = newline mode -- WE DO NOT want this
+         * [-n] = newline mode - Ignore this
+            * This is an optional parameter for test script...
+            * **We do not want this enabled**
          
 
 
