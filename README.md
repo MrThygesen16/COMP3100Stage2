@@ -29,6 +29,9 @@ See [DCS Report] for further documentation.
 5. Once files have appropriate permissions go to the src directory
     * `COMP3100Stage2/src/`
     
+    a. run the command: `javac Client.java`
+    b. might need to do the same for `Job.java` & `Server.java`
+    
 6. Now finally run this command:
     * `./test_results java Client" -o co -c configs/other/`
     
