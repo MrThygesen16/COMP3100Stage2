@@ -51,7 +51,7 @@ See [DCS Report] for further documentation.
             * ru = resource utilisation
             * co = cost optimisation
           * -c is the configuration directory
-            * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
+                * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
           * [-n] = newline mode -- WE DO NOT want this
           * client_command_string can also be ingnored
 
