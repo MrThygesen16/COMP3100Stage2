@@ -20,7 +20,6 @@ See [DCS Report] for further documentation.
     * Might need to for these too: 
         * `Server.java`
         * `Job.java`
-        * 
 E.g. `sudo chmod u+rwx ds-server`, essentially this gives the file read, write, and run permissions...
 
 
