@@ -43,12 +43,10 @@ See [DCS Report] for further documentation.
       E.g. `sudo chmod u+rwx ds-server`
 
       
-      * If running into issues (Optional): 
+      * (Optional) If there are still issues, try doing the same for the files below: 
            * Server.java
            * Job.java
             
-       
-
 
       Essentially this gives the file read, write, and run permissions...
    
@@ -67,7 +65,9 @@ See [DCS Report] for further documentation.
     
     
 5. Whilst still in `src` folder, we can now run the test-script:
-    * `./test_results "java Client" -o co -c configs/other/`
+    
+    
+    * `./test_results "java Client" -o co -c configs/other/` <-- Copy and paste this into the terminal.
     
     
     The objective of this custom algorithm is cost optimisation (aka co)
