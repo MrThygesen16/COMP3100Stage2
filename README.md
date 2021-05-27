@@ -18,7 +18,8 @@ See [DCS Report] for further documentation.
 
 2. Download/Clone this git repo by doing either:
     *  Download as zip and extract to suitable location; or
-    *  Type the follwing in the command-line: `git clone https://github.com/MrThygesen16/COMP3100Stage2`
+    *  Type the follwing in the command-line: 
+      `git clone https://github.com/MrThygesen16/COMP3100Stage2`
 
 3. Once downloaded and/or extracted go to the `src` folder: `COMP3100Stage2/src/` 
 
@@ -26,8 +27,10 @@ See [DCS Report] for further documentation.
     We want to make sure the files have correct permissions 
     
     
-      Run the command `sudo chmod u+rwx [filename]` for the necessary files:
+      Run the following command for the Necessary files:
       
+         `sudo chmod u+rwx [filename]` 
+    
       * Necessary:
         * ds-server
         * test_results
