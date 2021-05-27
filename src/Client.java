@@ -168,7 +168,7 @@ public class Client {
 		// check servers given by ds-server fit the job req's as best they can...
 		for (Server s: servers){
 
-			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq())){
+			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq()) && s.getWaitJob() < 1 ){
 			 	
 				// populate potential list of servers to send jobs
 				feasibleServers.add(s);
@@ -180,11 +180,12 @@ public class Client {
 		// server object to return at end
 		Server allocatedServ;
 
-		// if no absolutely best serrvers, we iterate through the list again
+		// if no absolutely best servers, we iterate through the list again
 		// and just choose server with the lowest # of waiting jobs
 		if (feasibleServers.isEmpty()){
 			
-			int waitJ = Integer.MAX_VALUE;
+			// set to abritrary large value
+			int waitJ = Short.MAX_VALUE;
 			allocatedServ = servers.get(0);
 
 			for (Server s: servers){
@@ -199,7 +200,6 @@ public class Client {
 		} else {
 			// given list of best servers
 			// we iterate through to find the one with highest # of running jobs
-			// and the # of waiting jobs should be less than 1
 			// we pick the job with highest # of running jobs
 			// since the ds-server can run them concurrently...
 
@@ -210,9 +210,10 @@ public class Client {
 
 				int runJ = -1;
 				
-				if (s.getWaitJob() < 1 && s.getRunJob() > runJ){
+				if (s.getRunJob() > runJ){
 					allocatedServ = s;
 					runJ = s.getRunJob();
+
 				}
 
 			}
@@ -247,7 +248,6 @@ public class Client {
 				String		int			String		int			int		int		int		int		int
 				serverType 	serverID 	state 	curStartTime 	core 	mem 	disk 	#wJobs 	#rJobs
 		
-			
 
 			[n] represnts the value in the array of Strings 'splitStr'
 			e.g.
