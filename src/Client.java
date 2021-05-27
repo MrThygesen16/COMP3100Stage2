@@ -170,7 +170,7 @@ public class Client {
 
 			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq())){
 			 	
-				// populate potential list of servers to send job to
+				// populate potential list of servers to send jobs
 				feasibleServers.add(s);
 
 			} 
@@ -335,10 +335,10 @@ public class Client {
 		String inStr = "";
 
 		/* 
-			An Integer's max value is: 65,534
+			An shorts' max value * 2 = 65,534
 			This should be sufficient in storing pretty much any message from ds-server.
 		*/
-		char[] cbuf = new char[Integer.MAX_VALUE];
+		char[] cbuf = new char[(Short.MAX_VALUE)*2];
 		try {
 			in.read(cbuf);
 		} catch (IOException e) {
