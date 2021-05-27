@@ -4,8 +4,8 @@ Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 See [DCS Report] for further documentation.
 
 ### Implemented Algorithims
-- Simple First Fit
 - Custom Algorithm
+
 
 ### Demo Instructions:
 
