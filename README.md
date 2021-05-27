@@ -30,7 +30,7 @@ See [DCS Report] for further documentation.
     We want to make sure the files have correct permissions 
     
     
-      * Run the following command for the Necessary files:
+    Run the following command for the necessary files:
       
       `sudo chmod u+rwx [filename]` 
     
