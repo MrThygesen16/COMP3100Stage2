@@ -3,10 +3,22 @@ Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 
 See [DCS Report] for further documentation.
 
+### Demo Instructions:
+
+1. Download/Clone Git repo
+2. Extract/unzip files if need be
+3. Make sure files have permissions by running `sudo chmod u+rwx [filename]` for the following:
+    * ds-server
+    * test_results
+    * Client.java
+4. Once they have appropriate permissions run:
+    * "./test_results `java Client" -o co -c configs/other/`
+
+ 
 
 ### Implemented Algorithims
-- First Fit
-- Custom First Fit
+- Simple First Fit
+- Custom Algorithm
 
 ### Group Members for Stage 1
 - Anthony Allan - ` (45634963) `
