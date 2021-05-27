@@ -8,7 +8,7 @@ See [DCS Report] for further documentation.
 * [Algorithms](### Algorithims)  
 
 
-### Algorithims
+### Implemented Algorithims
 - Custom Algorithm
 
 
