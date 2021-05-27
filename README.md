@@ -19,18 +19,18 @@ See [DCS Report] for further documentation.
     We want to make sure the files have correct permissions 
     
     
-      Run the command `sudo chmod u+rwx [filename]` for the following files:
+      Run the command `sudo chmod u+rwx [filename]` for the necessary files:
       
-      
-      E.g. `sudo chmod u+rwx ds-server` 
-      
-      
-      * ds-server
+      * Necessary:
+        * ds-server
         * test_results
-         * Client.java
-         * Might need to for these too: 
+        * Client.java
+      * Might need to for these too: 
            * Server.java
-            * Job.java
+           * Job.java
+            
+       
+      E.g. `sudo chmod u+rwx ds-server` 
 
 
       Essentially this gives the file read, write, and run permissions...
