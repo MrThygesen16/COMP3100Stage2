@@ -50,8 +50,14 @@ See [DCS Report] for further documentation.
 4. Once files have appropriate permissions:
 
 
-    - Run the command: `javac Client.java`, this compiles the java Client code
-    - Might need to do the same for `Job.java` & `Server.java`
+    * We need to first compile the Client file: 
+    
+    
+      Type: `javac Client.java` (In the terminal)
+    
+    
+    * If there are still issues then do the same for: 
+      * `Job.java` & `Server.java`
     
     
 5. Whilst still in `src` folder, we can now run the test-script:
@@ -64,7 +70,7 @@ See [DCS Report] for further documentation.
     The usage of the test-script is:
     * `./test_results "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n] `
          * client_command_string is the name of the java Client class
-            * In our case it will be "java Client"
+            * In our case it will be `"java Client"`
             * This Client (`Client.java`) does not accept any command-line paramters
                 * The default algorithm is a custom one 
          * -o is objective of algorithm: 
