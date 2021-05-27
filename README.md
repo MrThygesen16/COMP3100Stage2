@@ -19,7 +19,9 @@ See [DCS Report] for further documentation.
     * `Client.java`
     * Might need to for these too: 
         * `Server.java`
-        * `Job.java` 
+        * `Job.java`
+        * 
+E.g. `sudo chmod u+rwx ds-server`, essentially this gives the file read, write, and run permissions...
         
 5. Once files have appropriate permissions go to the src directory
     * `COMP3100Stage2/src/`
