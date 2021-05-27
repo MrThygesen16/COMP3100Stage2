@@ -5,7 +5,7 @@ See [DCS Report] for further documentation.
 
 ## Sections in Document:
 
-* [Algorithms](### Implemented Algorithms)  
+* [Algorithms](README.md#implemented-algorithms)  
 
 
 ### Implemented Algorithms
