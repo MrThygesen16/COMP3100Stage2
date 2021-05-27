@@ -54,7 +54,8 @@ See [DCS Report] for further documentation.
     * `./test_results "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n] `
          * client_command_string is the name of the java Client class
             * In our case it will be "java Client"
-            * This program does not accept any command-line paramters
+            * This Client (`Client.java`) does not accept any command-line paramters
+                * The default algorithm is a custom one 
          * -o is objective of algorithm: 
             * tt = turnaround time
             * ru = resource utilisation
