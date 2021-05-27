@@ -50,10 +50,10 @@ See [DCS Report] for further documentation.
             * tt = turnaround time
             * ru = resource utilisation
             * co = cost optimisation
-          * -c is the configuration directory
-                * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
-          * [-n] = newline mode -- WE DO NOT want this
-          * client_command_string can also be ingnored
+         * -c is the configuration directory
+            * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
+         * [-n] = newline mode -- WE DO NOT want this
+         * client_command_string can also be ingnored
 
 
 7. That should be it.
