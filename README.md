@@ -42,8 +42,20 @@ See [DCS Report] for further documentation.
     - might need to do the same for `Job.java` & `Server.java`
     
 6. Whilst still in `src` folder, we can now run the test-script:
-    * `./test_results java Client" -o co -c configs/other/`
+    * `./test_results "java Client" -o co -c configs/other/`
     
+    The usage of the test-script is:
+    * `./test_results -o {tt,ru,co} [-c CONFIG_DIR] [-n] client_command_string`
+         * -o is objective of algorithm: 
+            * tt = turnaround time
+            * ru = resource utilisation
+            * co = cost optimisation
+          * -c is the configuration directory
+            * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
+          * [-n] = newline mode -- WE DO NOT want this
+          * client_command_string can also be ingnored
+
+
 7. That should be it.
 
  
