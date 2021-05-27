@@ -5,10 +5,10 @@ See [DCS Report] for further documentation.
 
 ## Sections in Document:
 
-* [Algorithms](###Implemented Algorithims)  
+* [Algorithms](### Algorithims)  
 
 
-### Implemented Algorithims
+### Algorithims
 - Custom Algorithm
 
 
