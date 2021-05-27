@@ -1,7 +1,7 @@
 # **COMP3100 Stage 2**
 Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 
-See [DCS Report] for further documentation.
+See [DJS Report] for further documentation.
 
 
 ### Sections in Document:
