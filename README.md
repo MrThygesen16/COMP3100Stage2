@@ -18,7 +18,7 @@ See [DCS Report] for further documentation.
 
 2. Download/Clone this git repo by doing either:
     *  Download as zip and extract to suitable location; or
-    *  Type the command line type: `git clone https://github.com/MrThygesen16/COMP3100Stage2`
+    *  Type the follwing in the command-line: `git clone https://github.com/MrThygesen16/COMP3100Stage2`
 
 3. Once downloaded and/or extracted go to the `src` folder: `COMP3100Stage2/src/` 
 
