@@ -13,11 +13,14 @@ See [DCS Report] for further documentation.
 
 ### Demo Instructions:
 
-1. Download/Clone Git repo
 
-3. Extract/unzip downloaded file if need be
+1. Make sure you are in Ubuntu and have a terminal open
 
-4. First go to the `src` folder: `COMP3100Stage2/src/` 
+2. Download/Clone this git repo by doing either:
+    *  Download as zip and extract to suitable location; or
+    *  Type the command line type: `git clone https://github.com/MrThygesen16/COMP3100Stage2`
+
+3. Once downloaded and/or extracted go to the `src` folder: `COMP3100Stage2/src/` 
 
 
     We want to make sure the files have correct permissions 
@@ -40,15 +43,19 @@ See [DCS Report] for further documentation.
       Essentially this gives the file read, write, and run permissions...
    
         
-5. Once files have appropriate permissions:
+4. Once files have appropriate permissions:
+
 
     - run the command: `javac Client.java`, this compiles the java Client code
     - might need to do the same for `Job.java` & `Server.java`
     
-6. Whilst still in `src` folder, we can now run the test-script:
+    
+5. Whilst still in `src` folder, we can now run the test-script:
     * `./test_results "java Client" -o co -c configs/other/`
     
+    
     The objective of this custom algorithm is cost optimisation (aka co)
+    
     
     The usage of the test-script is:
     * `./test_results "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n] `
@@ -68,7 +75,7 @@ See [DCS Report] for further documentation.
          
 
 
-7. That should be it.
+6. That should be it.
 
  
 ### Group Members for Stage 1
