@@ -3,6 +3,11 @@ Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 
 See [DCS Report] for further documentation.
 
+## Sections in Document:
+
+* [Algorithms](#Implemented Algorithims)  
+
+
 ### Implemented Algorithims
 - Custom Algorithm
 
