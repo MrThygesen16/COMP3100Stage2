@@ -32,12 +32,16 @@ See [DCS Report] for further documentation.
         * ds-server
         * test_results
         * Client.java
-      * Might need to for these too: 
+      
+      
+      E.g. `sudo chmod u+rwx ds-server`
+
+      
+      * If running into issues (Optional): 
            * Server.java
            * Job.java
             
        
-      E.g. `sudo chmod u+rwx ds-server`
 
 
       Essentially this gives the file read, write, and run permissions...
@@ -46,8 +50,8 @@ See [DCS Report] for further documentation.
 4. Once files have appropriate permissions:
 
 
-    - run the command: `javac Client.java`, this compiles the java Client code
-    - might need to do the same for `Job.java` & `Server.java`
+    - Run the command: `javac Client.java`, this compiles the java Client code
+    - Might need to do the same for `Job.java` & `Server.java`
     
     
 5. Whilst still in `src` folder, we can now run the test-script:
