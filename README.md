@@ -6,8 +6,8 @@ See [DCS Report] for further documentation.
 ### Demo Instructions:
 
 1. Download/Clone Git repo
-2. Extract/unzip files if need be
-3. Make sure files have permissions by running `sudo chmod u+rwx [filename]` for the following:
+2. Extract/unzip downloaded file if need be
+3. Make sure files have permissions by running `sudo chmod u+rwx [filename]` for the following files:
     * ds-server
     * test_results
     * Client.java
