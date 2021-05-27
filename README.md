@@ -3,6 +3,10 @@ Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 
 See [DCS Report] for further documentation.
 
+### Implemented Algorithims
+- Simple First Fit
+- Custom Algorithm
+
 ### Demo Instructions:
 
 1. Download/Clone Git repo
@@ -14,14 +18,12 @@ See [DCS Report] for further documentation.
     * Might need to for these too: 
         * `Server.java`
         * `Job.java` 
-4. Once they have appropriate permissions run:
-    * "./test_results `java Client" -o co -c configs/other/`
+4. Once files have appropriate permissions go to the src directory
+    * `COMP3100Stage2/src/`
+5. Now finally run this command:
+    * `./test_results java Client" -o co -c configs/other/`
 
  
-
-### Implemented Algorithims
-- Simple First Fit
-- Custom Algorithm
 
 ### Group Members for Stage 1
 - Anthony Allan - ` (45634963) `
