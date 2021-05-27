@@ -5,11 +5,17 @@ See [DCS Report] for further documentation.
 
 ## Sections in Document:
 
-* [Algorithms](README.md#implemented-algorithms)  
+* [Algorithms](README.md#implemented-algorithms)
+* [Demo Instructions](README.md#demo-instructions)
+* [Stage 1 Group Members](README.md#Group-Members-for-Stage-1)        
 
 
 ### Implemented Algorithms
 - Custom Algorithm
+
+This algorithm tries to be well rounded.
+
+
 
 
 ### Demo Instructions:
