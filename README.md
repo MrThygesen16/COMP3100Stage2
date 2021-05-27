@@ -13,25 +13,28 @@ See [DCS Report] for further documentation.
 
 3. Extract/unzip downloaded file if need be
 
-4. Make sure files have permissions by running `sudo chmod u+rwx [filename]` for the following files:
-    * `ds-server`
-    * `test_results`
-    * `Client.java`
-    * Might need to for these too: 
-        * `Server.java`
-        * `Job.java`
+4. First go to the `src` folder: `COMP3100Stage2/src/` 
+    We want to make sure the files have correct permissions 
+    
+      Run the command `sudo chmod u+rwx [filename]` for the following files:
+      
+      E.g. `sudo chmod u+rwx ds-server` 
+         * `ds-server`
+         * `test_results`
+         * `Client.java`
+         * Might need to for these too: 
+            * `Server.java`
+            * `Job.java`
 
-
-   E.g. `sudo chmod u+rwx ds-server`, essentially this gives the file read, write, and run permissions...
-
-
+      Essentially this gives the file read, write, and run permissions...
+   
         
-5. Once files have appropriate permissions go to the `src` folder: * `COMP3100Stage2/src/`
+5. Once files have appropriate permissions:
 
-    - run the command: `javac Client.java`
+    - run the command: `javac Client.java`, this compiles the java Client code
     - might need to do the same for `Job.java` & `Server.java`
     
-6. Now finally run this command:
+6. Whilst still in `src` folder, we can now run the test-script:
     * `./test_results java Client" -o co -c configs/other/`
     
 7. That should be it.
