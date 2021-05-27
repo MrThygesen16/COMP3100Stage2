@@ -13,7 +13,7 @@ See [DCS Report] for further documentation.
     * `Client.java`
     * Might need to for these too: 
         * `Server.java`
-        * 'Job.java' 
+        * `Job.java` 
 4. Once they have appropriate permissions run:
     * "./test_results `java Client" -o co -c configs/other/`
 
