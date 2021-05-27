@@ -3,18 +3,11 @@ Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 
 See [DCS Report] for further documentation.
 
-## Sections in Document:
 
-* [Algorithms](README.md#implemented-algorithms)
+### Sections in Document:
+
 * [Demo Instructions](README.md#demo-instructions)
 * [Stage 1 Group Members](README.md#Group-Members-for-Stage-1)        
-
-
-### Implemented Algorithms
-- Custom Algorithm
-
-This algorithm tries to be well rounded.
-
 
 
 
