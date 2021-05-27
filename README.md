@@ -47,13 +47,14 @@ See [DCS Report] for further documentation.
     The objective of this custom algorithm is cost optimisation (aka co)
     
     The usage of the test-script is:
-    * `./test_results "client_command_string" -o {tt,ru,co} [-c CONFIG_DIR] [-n] `
+    * `./test_results "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n] `
          * client_command_string is the name of the java Client class
             * In our case it will be "java Client"
+            * This program does not accept any command-line paramters
          * -o is objective of algorithm: 
             * tt = turnaround time
             * ru = resource utilisation
-            * co = cost optimisation 
+            * co = cost optimisation (the objective this algorithm is optimised for)
          * -c is the configuration directory
             * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
          * [-n] = newline mode -- WE DO NOT want this
