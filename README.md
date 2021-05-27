@@ -22,6 +22,8 @@ See [DCS Report] for further documentation.
         * `Job.java`
         * 
 E.g. `sudo chmod u+rwx ds-server`, essentially this gives the file read, write, and run permissions...
+
+
         
 5. Once files have appropriate permissions go to the src directory
     * `COMP3100Stage2/src/`
