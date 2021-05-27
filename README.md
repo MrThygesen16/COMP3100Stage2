@@ -23,7 +23,7 @@ See [DCS Report] for further documentation.
 
 
 
-E.g. `sudo chmod u+rwx ds-server`, essentially this gives the file read, write, and run permissions...
+      E.g. `sudo chmod u+rwx ds-server`, essentially this gives the file read, write, and run permissions...
 
 
         
