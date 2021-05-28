@@ -168,6 +168,7 @@ public class Client {
 		// check servers given by ds-server fit the job req's as best they can...
 		for (Server s: servers){
 
+			// we only want servers that have no waiting jobs...
 			if ((s.getDisk() >= job.get(0).getDiskReq() && s.getCores() >= job.get(0).getCoreReq() && s.getMemory() >= job.get(0).getMemeoryReq()) && s.getWaitJob() < 1 ){
 			 	
 				// populate potential list of servers to send jobs
@@ -208,9 +209,9 @@ public class Client {
 
 			for (Server s: feasibleServers){
 
-				int runJ = -1;
+				int runJ = Integer.MAX_VALUE;
 				
-				if (s.getRunJob() > runJ){
+				if (s.getRunJob() < runJ){
 					allocatedServ = s;
 					runJ = s.getRunJob();
 
