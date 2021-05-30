@@ -194,11 +194,21 @@ The arguments for ds-client are:
 
     ./ds-server -c [configuration file] -v [detail option]
     
+In our case it will look something like:
+
+    ./ds-server -c configs/[configuration folder]/[configuration file] -v [detail option]
     
+The options for folders are:
+
+* `configs/other/`
+* `configs/default/`
+* `configs/week6/`
+
+
 The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
 Essentially brief will show less detail than all.
 
-There are 3 folders of configs in `COMP3100Stage2/src/configs/`, each folder contains the follwing configurations:
+There 3 folders in `COMP3100Stage2/src/configs/`, contain the follwing configurations:
 
 1. default
    * ds-config01--wk9.xml
