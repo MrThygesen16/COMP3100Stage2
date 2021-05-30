@@ -104,14 +104,14 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
         * In our case it will be `"java Client"`
           * This Client (`Client.java`) does not accept any command-line paramters
           * The default algorithm is a custom one 
-       * -o is objective of algorithm: 
-         * tt = turnaround time
-         * ru = resource utilisation
-         * co = cost optimisation (the objective this algorithm is optimised for)
-       * -c is the configuration directory
-         * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
-       * [-n] = newline mode - Ignore this
-         * This is an optional parameter for test script...
+      * -o is objective of algorithm: 
+        * tt = turnaround time
+        * ru = resource utilisation
+        * co = cost optimisation (the objective this algorithm is optimised for)
+      * -c is the configuration directory
+        * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
+      * [-n] = newline mode - Ignore this
+        * This is an optional parameter for test script...
          * **We do not want this enabled**
          
 6. We should expect to see an output like this (once it has finished running):
