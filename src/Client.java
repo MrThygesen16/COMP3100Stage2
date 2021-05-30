@@ -55,12 +55,10 @@ public class Client {
 
 		// arrayList for holding job info from "GETS Capable"
 		ArrayList<Job> jobs = new ArrayList<Job>();
-
 		
 		// handshake completed
 		boolean connected = true;
 		
-
 		// Tells client it is ready to recieve commands
 		sendMessage("REDY");
 
@@ -117,7 +115,6 @@ public class Client {
 			} 
 		}
 
-		
 		// close the connection
 		try {
 
@@ -134,24 +131,6 @@ public class Client {
 
 		// Exit the program
 		System.exit(1);
-	}
-
-
-	
-	/* 
-		First fit algo
-			finds first available server and schedules it
-		
-		This was my first attempt at a First-Fit algo.
-	*/
-	public String firstFit(ArrayList<Server> servers, ArrayList<Job> job){
-
-		// essentially just always picks the first server
-		// from the GETS Capable command
-
-		String serv = "";
-		serv = servers.get(0).getType() + " " + servers.get(0).getID();
-		return "SCHD " + job.get(0).getJobID() + " " + serv;
 	}
 
 
