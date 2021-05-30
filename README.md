@@ -50,9 +50,9 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
        sudo chmod u+rwx [filename]
     
       * Necessary:
-        * ds-server
-        * test_results
-        * Client.java
+        * `ds-server`
+        * `test_results`
+        * `Client.java`
       
       
       E.g. 
@@ -61,8 +61,8 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 
       
       * (Optional) If there are still issues, try doing the same for the files below: 
-           * Server.java
-           * Job.java
+           * `Server.java`
+           * `Job.java`
             
 
       Essentially this gives the file read, write, and run permissions...
@@ -248,7 +248,7 @@ For example:
      java Client
  
  
- The above example is running the config file: 'config100-long-low.xml', from the 'other folder'
+ The above example is running the config file: `config100-long-low.xml`, from `configs/other/`
  
 
  ----
