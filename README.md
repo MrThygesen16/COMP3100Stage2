@@ -18,9 +18,9 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 
 ### Sections in README:
 
-* [1. Demo Instructions](README.md#section-1:-demo-instructions)
-* [2. Instructions for testing individual configuration files](README.md#section-2:-Instructions-for-running-individual-Configuration-Files)
-* [3. Stage 1 Group Members](README.md#Section-3:-Group-Members-for-Stage-1)        
+* [1. Demo Instructions](README.md#section-1-demo-instructions)
+* [2. Instructions for testing individual configuration files](README.md#section-2-Instructions-for-running-individual-Configuration-Files)
+* [3. Stage 1 Group Members](README.md#Section-3-Group-Members-for-Stage-1)        
 
 
 ----
