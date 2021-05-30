@@ -18,14 +18,14 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 
 ### Sections in README:
 
-* [Demo Instructions](README.md#demo-instructions)
-* [Instructions for testing individual configuration files](README.md#Instructions-for-running-individual-Configuration-Files)
-* [Stage 1 Group Members](README.md#Group-Members-for-Stage-1)        
+* [1. Demo Instructions](README.md#section-1:-demo-instructions)
+* [2. Instructions for testing individual configuration files](README.md#section-2:-Instructions-for-running-individual-Configuration-Files)
+* [3. Stage 1 Group Members](README.md#Section-3:-Group-Members-for-Stage-1)        
 
 
 ----
 
-### Demo Instructions:
+### Section 1: Demo Instructions:
 
 
 1. Make sure you are in Ubuntu and have a terminal open
@@ -158,7 +158,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 ----
 
 
-### Instructions for running individual Configuration Files
+### Section 2: Instructions for running individual Configuration Files
 
 
 Once the steps above have been completed, you may wish to run each configuration file individually.
@@ -253,7 +253,7 @@ For example:
  ----
  
  
-### Group Members for Stage 1
+### Section 3: Group Members for Stage 1
 - Anthony Allan - ` (45634963) `
 - Chaz Lambrechtsen - `(45426317)`
 
