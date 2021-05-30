@@ -14,6 +14,8 @@ The 'docs' folder contains:
 The 'results' files (pdf/excel, in the docs folder) have been provided so that you can see how the data for the report has been collected, and how the averages were calculated and so on.
 
 
+----
+
 ### Sections in README:
 
 * [Demo Instructions](README.md#demo-instructions)
@@ -21,6 +23,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 * [Stage 1 Group Members](README.md#Group-Members-for-Stage-1)        
 
 
+----
 
 ### Demo Instructions:
 
@@ -152,6 +155,9 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 7. That should be it.
 
 
+----
+
+
 ### Instructions for running individual Configuration Files
 
 
@@ -244,8 +250,12 @@ For example:
  The above example is running the config file: 'config100-long-low.xml', from the 'other folder'
  
 
+ ----
  
  
 ### Group Members for Stage 1
 - Anthony Allan - ` (45634963) `
 - Chaz Lambrechtsen - `(45426317)`
+
+
+----
