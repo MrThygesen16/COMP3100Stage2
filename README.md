@@ -70,7 +70,9 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
     * We need to first compile the Client file: 
     
     
-      Type: `javac Client.java` (In the terminal)
+      Type (In the terminal): 
+      
+          javac Client.java
     
     
     * If there are still issues then do the same for: 
@@ -141,6 +143,7 @@ The arguments for ds-client are:
 
     ./ds-server -c [configuration file] -v [detail option]
     
+    
 The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
 Essentially brief will show less detail than all.
 
@@ -193,9 +196,11 @@ folder and configuratio you want.
 For example:
 
  Terminal 1: 
+ 
      ./ds-server -c configs/other/config100-long-low.xml -v all 
  
  Terminal 2: 
+ 
      java Client
  
  
