@@ -14,7 +14,7 @@ The 'docs' folder contains:
 The 'results' files (in the docs folder) have been provided so that you can see how the data for the report has been collected, and how the averages were calculated and so on.
 
 
-### Sections in Document:
+### Sections in README:
 
 * [Demo Instructions](README.md#demo-instructions)
 * [Stage 1 Group Members](README.md#Group-Members-for-Stage-1)        
