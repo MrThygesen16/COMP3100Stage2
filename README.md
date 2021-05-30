@@ -119,18 +119,18 @@ For example:
 Terminal 1: (ds-client)
 
 
-    `./ds-server -c configs/default/ds-config01--wk9.xml -v all`
+    ./ds-server -c configs/default/ds-config01--wk9.xml -v all
     
     
 Terminal 2: (DJS Client)
 
-    `java Client`
+    java Client
 
 
 
 The arguments for ds-client are:
 
-    `./ds-server -c [configuration file] -v [detail option]`
+    ./ds-server -c [configuration file] -v [detail option]
     
 The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
 Essentially brief will show less detail than all.
@@ -183,9 +183,11 @@ folder and configuratio you want.
 
 For example:
 
- Terminal 1: `./ds-server -c configs/other/config100-long-low.xml -v all` 
+ Terminal 1: 
+     ./ds-server -c configs/other/config100-long-low.xml -v all 
  
- Terminal 2: `java Client`
+ Terminal 2: 
+     java Client
  
  
  The above example is running the config file: 'config100-long-low.xml', from the 'other folder'
