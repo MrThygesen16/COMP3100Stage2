@@ -11,7 +11,7 @@ The 'docs' folder contains:
 * ds-sim user guide
 
 
-The 'results' files have been provided so that you may not only see how the data for the report has been collected, but also how the averages were calculated and so on.
+The 'results' files (in the docs folder) have been provided so that you can see how the data for the report has been collected, and how the averages were calculated and so on.
 
 
 ### Sections in Document:
