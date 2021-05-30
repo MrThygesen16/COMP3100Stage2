@@ -127,13 +127,13 @@ To do so you will need to open two terminals. One for ds-client, and the other f
 For example:
 
 
-  Terminal 1: (ds-client)
+1. Terminal 1: (ds-client)
 
 
     ./ds-server -c configs/default/ds-config01--wk9.xml -v all
     
     
-  Terminal 2: (DJS Client)
+ 2. Terminal 2: (DJS Client)
 
     java Client
 
