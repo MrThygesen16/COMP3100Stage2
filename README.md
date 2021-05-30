@@ -31,7 +31,8 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
     *  Type the follwing in the command-line: 
     
     
-      `git clone https://github.com/MrThygesen16/COMP3100Stage2`
+    
+             git clone https://github.com/MrThygesen16/COMP3100Stage2
 
 
 3. Once downloaded and/or extracted go to the `src` folder: `COMP3100Stage2/src/` 
@@ -42,7 +43,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
     
     Run the following command for the necessary files:
       
-      `sudo chmod u+rwx [filename]` 
+       sudo chmod u+rwx [filename]
     
       * Necessary:
         * ds-server
@@ -50,7 +51,9 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
         * Client.java
       
       
-      E.g. `sudo chmod u+rwx ds-server`
+      E.g. 
+            
+            sudo chmod u+rwx ds-server
 
       
       * (Optional) If there are still issues, try doing the same for the files below: 
@@ -77,27 +80,33 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 5. Whilst still in `src` folder, we can now run the test-script:
     
     
-    Type: `./test_results "java Client" -o co -c configs/other/` (Or copy/paste) into terminal
+    Type (Or copy/paste) into terminal: 
+    
+       ./test_results "java Client" -o co -c configs/other/
     
     
     The objective of this custom algorithm is cost optimisation (aka co)
     
     
     The usage of the test-script is:
-    * `./test_results "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n] `
-         * client_command_string is the name of the java Client class
-            * In our case it will be `"java Client"`
-            * This Client (`Client.java`) does not accept any command-line paramters
-                * The default algorithm is a custom one 
-         * -o is objective of algorithm: 
-            * tt = turnaround time
-            * ru = resource utilisation
-            * co = cost optimisation (the objective this algorithm is optimised for)
-         * -c is the configuration directory
-            * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
-         * [-n] = newline mode - Ignore this
-            * This is an optional parameter for test script...
-            * **We do not want this enabled**
+    
+    
+         ./test_results "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n]
+         
+         
+      * client_command_string is the name of the java Client class
+          * In our case it will be `"java Client"`
+          * This Client (`Client.java`) does not accept any command-line paramters
+             * The default algorithm is a custom one 
+       * -o is objective of algorithm: 
+          * tt = turnaround time
+          * ru = resource utilisation
+          * co = cost optimisation (the objective this algorithm is optimised for)
+       * -c is the configuration directory
+          * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
+       * [-n] = newline mode - Ignore this
+          * This is an optional parameter for test script...
+          * **We do not want this enabled**
          
 
 
