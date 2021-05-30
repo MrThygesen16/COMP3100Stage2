@@ -173,12 +173,13 @@ For example:
 1. Terminal 1: (ds-client)
 
 
-    ./ds-server -c configs/default/ds-config01--wk9.xml -v all
+       ./ds-server -c configs/default/ds-config01--wk9.xml -v all
     
     
  2. Terminal 2: (DJS Client)
 
-    java Client
+
+        java Client
 
 
 
