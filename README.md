@@ -103,6 +103,95 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 
 6. That should be it.
 
+
+### Instructions for running individual Configuration Files
+
+
+Once the steps above have been completed, you may wish to run each configuration file individually.
+
+
+To do so you will need to open two terminals. One for ds-client, and the other for the DJS Client.
+
+
+For example:
+
+
+Terminal 1: (ds-client)
+
+
+    `./ds-server -c configs/default/ds-config01--wk9.xml -v all`
+    
+    
+Terminal 2: (DJS Client)
+
+    `java Client`
+
+
+
+The arguments for ds-client are:
+
+    `./ds-server -c [configuration file] -v [detail option]`
+    
+The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
+Essentially brief will show less detail than all.
+
+There are 3 folders of configs in `COMP3100Stage2/src/configs/`, each contain:
+
+1. default
+   * ds-config01--wk9.xml
+   * ds-S1-config00--demo.xml
+   * ds-S1-config01--demo.xml
+   * ds-S1-config02--demo.xml
+   * ds-S1-config03--demo.xml
+   * ds-S1-config04--demo.xml
+   * ds-S1-config05--demo.xml
+   * ds-S1-config06--demo.xml
+   * ds-sample-config01.xml
+   * ds-sample-config02.xml
+   * ds-sample-config03.xml
+   * ds-sample-config04.xml
+   * ds-sample-config05.xml
+3. other
+   * config100-long-high.xml
+   * config100-long-low.xml
+   * config100-long-med.xml
+   * config100-med-high.xml
+   * config100-med-low.xml
+   * config100-med-med.xml
+   * config100-short-high.xml
+   * config100-short-low.xml
+   * config100-short-med.xml
+   * config20-long-high.xml
+   * config20-long-low.xml
+   * config20-long-med.xml
+   * config20-med-high.xml
+   * config20-med-low.xml
+   * config20-med-med.xml
+   * config20-short-high.xml
+   * config20-short-low.xml
+   * config20-short-med.xml
+5. week6
+   * ds-S1-config01--wk6.xml
+   * ds-S1-config02--wk6.xml
+   * ds-S1-config03--wk6.xml
+   * ds-S1-config04--wk6.xml
+   * ds-S1-config05--wk6.xml
+
+
+So to run any of the above configuration files for DJS client use the example above and specify which
+folder and configuratio you want. 
+
+For example:
+
+ Terminal 1: `./ds-server -c configs/other/config100-long-low.xml -v all` 
+ 
+ Terminal 2: `java Client`
+ 
+ 
+ The above example is running the config file: 'config100-long-low.xml', from the 'other folder'
+ 
+
+ 
  
 ### Group Members for Stage 1
 - Anthony Allan - ` (45634963) `
