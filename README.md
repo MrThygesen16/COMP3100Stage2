@@ -110,9 +110,45 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
           * This is an optional parameter for test script...
           * **We do not want this enabled**
          
+6. We should expect to see an output like this (once it has finished running):
+                  
+
+                  Total rental cost
+                  Config                      |ATL       |FF        |BF        |WF        |Yours
+                  config100-long-high.xml     |620.01    |776.34    |784.3     |886.06    |726.22
+                  config100-long-low.xml      |324.81    |724.66    |713.42    |882.02    |618.71
+                  config100-long-med.xml      |625.5     |1095.22   |1099.21   |1097.78   |846.58
+                  config100-med-high.xml      |319.7     |373.0     |371.74    |410.09    |352.0
+                  config100-med-low.xml       |295.86    |810.53    |778.18    |815.88    |618.65
+                  config100-med-med.xml       |308.7     |493.64    |510.13    |498.65    |390.38
+                  config100-short-high.xml    |228.75    |213.1     |210.25    |245.96    |219.0
+                  config100-short-low.xml     |225.85    |498.18    |474.11    |533.92    |382.77
+                  config100-short-med.xml     |228.07    |275.9     |272.29    |310.88    |257.98
+                  config20-long-high.xml      |254.81    |306.43    |307.37    |351.72    |303.81
+                  config20-long-low.xml       |88.06     |208.94    |211.23    |203.32    |155.53
+                  config20-long-med.xml       |167.04    |281.35    |283.34    |250.3     |237.56
+                  config20-med-high.xml       |255.58    |299.93    |297.11    |342.98    |296.99
+                  config20-med-low.xml        |86.62     |232.07    |232.08    |210.08    |155.06
+                  config20-med-med.xml        |164.01    |295.13    |276.4     |267.84    |261.48
+                  config20-short-high.xml     |163.69    |168.7     |168.0     |203.66    |173.27
+                  config20-short-low.xml      |85.52     |214.16    |212.71    |231.67    |155.1
+                  config20-short-med.xml      |166.24    |254.85    |257.62    |231.69    |217.92
+                  Average                     |256.05    |417.90    |414.42    |443.03    |353.83
+                  Normalised (ATL)            |1.0000    |1.6321    |1.6185    |1.7303    |1.3819
+                  Normalised (FF)             |0.6127    |1.0000    |0.9917    |1.0601    |0.8467
+                  Normalised (BF)             |0.6178    |1.0084    |1.0000    |1.0690    |0.8538
+                  Normalised (WF)             |0.5779    |0.9433    |0.9354    |1.0000    |0.7987
+                  Normalised (AVG [FF,BF,WF]) |0.6023    |0.9830    |0.9748    |1.0421    |0.8323
 
 
-6. That should be it.
+                  Final results:
+                  2.1: 1/1
+                  2.2: 1/1
+                  2.3: 1/1
+                  2.4: 6/6
+
+
+7. That should be it.
 
 
 ### Instructions for running individual Configuration Files
