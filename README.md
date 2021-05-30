@@ -210,7 +210,7 @@ Essentially brief will show less detail than all.
 
 There 3 folders in `COMP3100Stage2/src/configs/`, contain the follwing configurations:
 
-1. default
+1. `configs/default/`
    * ds-config01--wk9.xml
    * ds-S1-config00--demo.xml
    * ds-S1-config01--demo.xml
@@ -226,7 +226,7 @@ There 3 folders in `COMP3100Stage2/src/configs/`, contain the follwing configura
    * ds-sample-config05.xml
 
    
-2. other
+2. `configs/other/`
    * config100-long-high.xml
    * config100-long-low.xml
    * config100-long-med.xml
@@ -247,7 +247,7 @@ There 3 folders in `COMP3100Stage2/src/configs/`, contain the follwing configura
    * config20-short-med.xml
 
 
-3. week6
+3. `configs/week6/`
    * ds-S1-config01--wk6.xml
    * ds-S1-config02--wk6.xml
    * ds-S1-config03--wk6.xml
