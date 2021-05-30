@@ -4,7 +4,14 @@ Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 See [DJS Report] for further documentation.
 
 
-The Excel File (Stage 2 Results), and the PDF (Stage 2 Test Results) have been provided so that you may not only see how the data for the report has been collected, but also how the averages were calculated and so on.
+The 'docs' folder contains: 
+
+* Results pdf
+* Results excel file
+* ds-sim user guide
+
+
+The 'results' files have been provided so that you may not only see how the data for the report has been collected, but also how the averages were calculated and so on.
 
 
 ### Sections in Document:
