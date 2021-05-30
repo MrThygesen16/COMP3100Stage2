@@ -152,7 +152,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
                   2.4: 6/6
 
 
-7. That should be it.
+7. That should be it. The results at the bottom indicate the marks (out of 9) for the test script.
 
 
 ----
