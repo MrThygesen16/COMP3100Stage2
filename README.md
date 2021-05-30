@@ -1,7 +1,7 @@
 # **COMP3100 Stage 2**
 Stage 2 for COMP3100 by Michael Thygesen - `45207275`
 
-See [DJS Report] for further documentation.
+The file "DJS Report.pdf" is the report for Stage 2.
 
 
 The 'docs' folder contains: 
