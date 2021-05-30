@@ -104,15 +104,22 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
         * In our case it will be `"java Client"`
           * This Client (`Client.java`) does not accept any command-line paramters
           * The default algorithm is a custom one 
+          
+          
       * -o is objective of algorithm: 
         * tt = turnaround time
         * ru = resource utilisation
         * co = cost optimisation (the objective this algorithm is optimised for)
+        
+        
       * -c is the configuration directory
         * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
+        
+        
       * [-n] = newline mode - Ignore this
         * This is an optional parameter for test script...
          * **We do not want this enabled**
+         
          
 6. We should expect to see an output like this (once it has finished running):
                   
@@ -191,7 +198,7 @@ The arguments for ds-client are:
 The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
 Essentially brief will show less detail than all.
 
-There are 3 folders of configs in `COMP3100Stage2/src/configs/`, each contain:
+There are 3 folders of configs in `COMP3100Stage2/src/configs/`, each folder contains the follwing configurations:
 
 1. default
    * ds-config01--wk9.xml
@@ -207,7 +214,9 @@ There are 3 folders of configs in `COMP3100Stage2/src/configs/`, each contain:
    * ds-sample-config03.xml
    * ds-sample-config04.xml
    * ds-sample-config05.xml
-3. other
+
+   
+2. other
    * config100-long-high.xml
    * config100-long-low.xml
    * config100-long-med.xml
@@ -226,7 +235,9 @@ There are 3 folders of configs in `COMP3100Stage2/src/configs/`, each contain:
    * config20-short-high.xml
    * config20-short-low.xml
    * config20-short-med.xml
-5. week6
+
+
+3. week6
    * ds-S1-config01--wk6.xml
    * ds-S1-config02--wk6.xml
    * ds-S1-config03--wk6.xml
