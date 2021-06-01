@@ -202,13 +202,14 @@ The options for folders are:
 
 * `configs/other/`
 * `configs/default/`
+* `configs/S2DemoConfigs/`
 * `configs/week6/`
 
 
 The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
 Essentially brief will show less detail than all.
 
-There 3 folders in `COMP3100Stage2/src/configs/`, contain the follwing configurations:
+There 4 folders in `COMP3100Stage2/src/configs/`, contain the follwing configurations:
 
 1. `configs/default/`
    * ds-config01--wk9.xml
@@ -247,7 +248,28 @@ There 3 folders in `COMP3100Stage2/src/configs/`, contain the follwing configura
    * config20-short-med.xml
 
 
-3. `configs/week6/`
+3. `configs/S2DemoConfigs/`  
+   * config20-long-low.xml
+   * config20-med-med.xml
+   * config20-short-high.xml
+   * config32-long-high.xml
+   * config32-long-med.xml
+   * config32-med-high.xml
+   * config32-med-low.xml
+   * config32-short-low.xml
+   * config32-short-med.xml
+   * config50-long-high.xml
+   * config50-long-low.xml
+   * config50-long-med.xml
+   * config50-med-high.xml
+   * config50-med-low.xml
+   * config50-med-med.xml
+   * config50-short-high.xml
+   * config50-short-low.xml
+   * config50-short-med.xml
+
+
+4. `configs/week6/`
    * ds-S1-config01--wk6.xml
    * ds-S1-config02--wk6.xml
    * ds-S1-config03--wk6.xml
