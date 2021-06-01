@@ -51,7 +51,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
     
       * Necessary:
         * `ds-server`
-        * `test_results`
+        * `demoS2Final`
         * `Client.java`
       
       
@@ -88,16 +88,16 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
     
     Type (Or copy/paste) into terminal: 
     
-       ./test_results "java Client" -o co -c configs/other/
+        ./demoS2Final "java Client" -o co -c configs/S2DemoConfigs/
     
-    
+        
     The objective of this custom algorithm is cost optimisation (aka co)
     
     
     The usage of the test-script is:
     
     
-         ./test_results "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n]
+         ./demoS2Final "java [Client-name] [optional paramters]" -o {tt,ru,co} [-c CONFIG_DIR] [-n]
          
          
       * client_command_string is the name of the java Client class
