@@ -113,7 +113,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
         
         
       * -c is the configuration directory
-        * The right config files can be found in `COMP3100Stage2/src/configs/other/` 
+        * The configuration files can be found in `COMP3100Stage2/src/configs/` 
         
         
       * [-n] = newline mode - Ignore this
