@@ -18,12 +18,49 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 
 ### Sections in README:
 
+* [0. Easy Demo](README.md#section-0-easier-demo-instructions)
 * [1. Demo Instructions](README.md#section-1-demo-instructions)
 * [2. Instructions for testing individual configuration files](README.md#section-2-Instructions-for-running-individual-Configuration-Files)
 * [3. Stage 1 Group Members](README.md#Section-3-Group-Members-for-Stage-1)        
 
 
 ----
+
+### Section 0: Easier Demo Instructions
+
+Simply run the script:
+
+     ./runTest.sh {tt || co || ru}
+     
+     Where
+         tt = turnaround time
+         co = cost optimisation
+         ru = resource utilisation    
+ 
+
+For Example:
+
+    /runTest.sh co
+    
+
+If you are encountering issues with running this script make sure to:
+
+* give permissions to the following files:
+   * `runTest.sh`
+   * `Client.java`
+   * `demoS2Final`
+   * `ds-server`
+
+You can give permission to these files by doing:
+
+    chmod u+rwx [fileName]
+    
+    
+For example:
+
+    chmod u+rwx runTest.sh
+
+
 
 ### Section 1: Demo Instructions:
 
