@@ -71,7 +71,7 @@ The script is working properly if you see the following output:
      ...
 
 
-
+-----
 
 
 ### Section 1: Demo Instructions:
