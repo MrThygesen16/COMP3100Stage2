@@ -18,7 +18,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 
 ### Sections in README:
 
-* [0. Easy Demo](README.md#section-0-easier-demo-instructions)
+* [0. Easy Demo Instructions](README.md#section-0-easier-demo-instructions)
 * [1. Demo Instructions](README.md#section-1-demo-instructions)
 * [2. Instructions for testing individual configuration files](README.md#section-2-Instructions-for-running-individual-Configuration-Files)
 * [3. Stage 1 Group Members](README.md#Section-3-Group-Members-for-Stage-1)        
@@ -61,9 +61,22 @@ For example:
     chmod u+rwx runTest.sh
 
 
+The script is working properly if you see the following output:
+
+     Testing for: Cost Optimisation (co)
+
+     Running config20-long-low.xml
+     Running config20-med-med.xml
+     ...
+     ...
+
+
+
+
 
 ### Section 1: Demo Instructions:
 
+(This was written before the easy script was made... This is essentially the same process)
 
 1. Make sure you are in Ubuntu and have a terminal open
 
