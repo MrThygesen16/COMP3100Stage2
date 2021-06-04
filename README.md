@@ -28,7 +28,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 
 ### Section 0: Easier Demo Instructions
 
-Simply run the script:
+Simply run the script `runTest.sh`:
 
      ./runTest.sh {tt || co || ru}
      
@@ -40,7 +40,7 @@ Simply run the script:
 
 For Example:
 
-    /runTest.sh co
+    ./runTest.sh co
     
 
 If you are encountering issues with running this script make sure to:
