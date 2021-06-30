@@ -17,9 +17,7 @@ The 'results' files (pdf/excel, in the docs folder) have been provided so that y
 * [0. Easy Demo Instructions](README.md#section-0-easier-demo-instructions)
 * [1. Demo Instructions](README.md#section-1-demo-instructions)
 * [2. Instructions for testing individual configuration files](README.md#section-2-Instructions-for-running-individual-Configuration-Files)
-* [3. Stage 1 Group Members](README.md#Section-3-Group-Members-for-Stage-1)        
-
-
+   
 ----
 
 ### Section 0: Easier Demo Instructions
@@ -82,10 +80,10 @@ The script is working properly if you see the following output:
     
     
     
-             git clone https://github.com/MrThygesen16/COMP3100Stage2
+             git clone https://github.com/MrThygesen16/DistributedCloudScheduler
 
 
-3. Once downloaded and/or extracted go to the `src` folder: `COMP3100Stage2/src/` 
+3. Once downloaded and/or extracted go to the `src` folder: `DistributedCloudScheduler/src/` 
 
 
     We want to make sure the files have correct permissions 
@@ -159,7 +157,7 @@ The script is working properly if you see the following output:
         
         
       * -c is the configuration directory
-        * The configuration files can be found in `COMP3100Stage2/src/configs/` 
+        * The configuration files can be found in `DistributedCloudScheduler/src/configs/` 
         
         
       * [-n] = newline mode - Ignore this
@@ -255,7 +253,7 @@ The options for folders are:
 The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
 Essentially brief will show less detail than all.
 
-There 4 folders in `COMP3100Stage2/src/configs/`, contain the follwing configurations:
+There 4 folders in `DistributedCloudScheduler/src/configs/`, contain the follwing configurations:
 
 1. `configs/default/`
    * ds-config01--wk9.xml
