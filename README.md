@@ -1,8 +1,4 @@
-# **COMP3100 Stage 2**
-Stage 2 for COMP3100 by Michael Thygesen - `45207275`
-
-The file "DJS Report.pdf" is the report for Stage 2.
-
+# ** Distributed Cloud Scheduler **
 
 The 'docs' folder contains: 
 
@@ -345,11 +341,3 @@ For example:
  
 
  ----
- 
- 
-### Section 3: Group Members for Stage 1
-- Anthony Allan - ` (45634963) `
-- Chaz Lambrechtsen - `(45426317)`
-
-
-----
