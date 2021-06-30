@@ -1,4 +1,4 @@
-# Distributed Cloud Scheduler
+# Distributed Job Scheduler
 
 The 'docs' folder contains: 
 
@@ -82,10 +82,10 @@ The script is working properly if you see the following output:
     
     
     
-             git clone https://github.com/MrThygesen16/DistributedCloudScheduler
+             git clone https://github.com/MrThygesen16/DistributedJobScheduler
 
 
-3. Once downloaded and/or extracted go to the `src` folder: `DistributedCloudScheduler/src/` 
+3. Once downloaded and/or extracted go to the `src` folder: `DistributedJobScheduler/src/` 
 
 
     We want to make sure the files have correct permissions 
@@ -159,7 +159,7 @@ The script is working properly if you see the following output:
         
         
       * -c is the configuration directory
-        * The configuration files can be found in `DistributedCloudScheduler/src/configs/` 
+        * The configuration files can be found in `DistributedJobScheduler/src/configs/` 
         
         
       * [-n] = newline mode - Ignore this
@@ -255,7 +255,7 @@ The options for folders are:
 The option [Configuration file] specifies which config files to use. And [detail option] can be 'brief' or 'all'.
 Essentially brief will show less detail than all.
 
-There 4 folders in `DistributedCloudScheduler/src/configs/`, contain the follwing configurations:
+There 4 folders in `DistributedJobScheduler/src/configs/`, contain the follwing configurations:
 
 1. `configs/default/`
    * ds-config01--wk9.xml
