@@ -1,4 +1,4 @@
-# ** Distributed Cloud Scheduler **
+# Distributed Cloud Scheduler
 
 The 'docs' folder contains: 
 
