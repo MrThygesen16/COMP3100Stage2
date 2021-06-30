@@ -10,7 +10,7 @@ The 'docs' folder contains:
 The 'results' files (pdf/excel, in the docs folder) have been provided so that you can see how the data for the report has been collected, and how the averages were calculated and so on.
 
 
-This is an improved Scheduling Algorithm based on the work done I did with my team members in the project [Distributed Cloud Scheduler](https://github.com/cazdev/Distributed-Cloud-Scheduler). 
+This is an improved Scheduling Algorithm based on the work I did with my team members in the project [Distributed Cloud Scheduler](https://github.com/cazdev/Distributed-Cloud-Scheduler). 
 
 ----
 
